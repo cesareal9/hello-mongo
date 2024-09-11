@@ -1,23 +1,25 @@
-const db = require("./db.js")
+const db = require("../db.js")
 
 const Schema = db.Schema;
 
 const refrigeranteSchema = new Schema({
     porcentagem_suco : {    
-        type: Schema.types.Number,
+        type: String,
+    required: true,
     },
     kcal200ml: {
-        type: Schema.type.Number,
+        type: Number(),
     },
     sabor : {
-        type: Schema.types.String,
+        type: String,
+    required: true,
     },
     tamanhoML : {
-        type: Schema.types.Number
-    }
+        type: Number()
+    },
 })
 
-const refrigerante = db.model("index", refrigeranteSchema)
+const refrigerante = db.model("refrigerante", refrigeranteSchema)
 
 
 

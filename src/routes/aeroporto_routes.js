@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router()
-const cep_endereco = require("../cmiddlewares/cep_endereco.js");
+const cep_endereco = require("../middlewares/cep_endereco.js");
 const aeroporto_controller = require("../controllers/caneta_controller")
 
 router.post("/",cep_endereco ,aeroporto_controller.store)
