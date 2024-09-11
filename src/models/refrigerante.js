@@ -4,18 +4,18 @@ const Schema = db.Schema;
 
 const refrigeranteSchema = new Schema({
     porcentagem_suco : {    
-        type: String,
+        type: Schema.Types.String,
     required: true,
     },
     kcal200ml: {
-        type: Number(),
+        type: Schema.Types.Number,
     },
     sabor : {
-        type: String,
+        type: Schema.Types.String,
     required: true,
     },
     tamanhoML : {
-        type: Number()
+        type: Schema.Types.Number
     },
 })
 
@@ -23,4 +23,4 @@ const refrigerante = db.model("refrigerante", refrigeranteSchema)
 
 
 
-module.exports = refrigerante;
+module.exports = refrigerante();

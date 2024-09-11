@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router()
 
-const refrigerante_controller = require("../controllers/caneta_controller")
+const refrigerante_controller = require("../controllers/refrigerante_controller")
 
 router.post("/", refrigerante_controller.store)
 router.get("/", refrigerante_controller.index)
