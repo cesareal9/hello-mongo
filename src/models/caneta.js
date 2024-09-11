@@ -1,14 +1,14 @@
-const db = require("../db.js")
+const db = require("../src/db.js")
 
 const Schema = db.Schema;
 
 const canetaSchema = new Schema({
     cor : {    
-        type: Schema.types.String(),
+        type: Schema.Types.String,
         required: true
     },
     ehBic: {
-        type: Boolean,
+        type: Schema.Types.String,
     required: true,
     },
 })

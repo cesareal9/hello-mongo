@@ -1,18 +1,19 @@
-const db = require("../db.js")
+const db = require("./db.js")
 
 const Schema = db.Schema;
 
 const aeroportoSchema = new Schema({
     nome : {    
-        type: Schema.types.String(),
+        type: Schema.Types.String,
         required: true
     },
     endereco: {
-        type: Number()
+        type: Schema.Types.String,
+        required: true 
     },
 })
 
 const aeroporto = db.model("aeroporto", aeroportoSchema)
 
 
-module.exports = aeroporto;
+module.exports = aeroporto();

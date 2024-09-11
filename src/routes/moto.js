@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router()
 
-const moto_controller = require("../controllers/caneta_controller")
+const moto_controller = require("../controllers/moto_controller")
 
 router.post("/", moto_controller.store)
 router.get("/", moto_controller.index)
