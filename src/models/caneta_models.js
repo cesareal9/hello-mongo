@@ -1,18 +1,19 @@
-const db = require("./db.js")
+const db = require("../db.js")
 
 const Schema = db.Schema;
 
 const canetaSchema = new Schema({
     cor : {    
-        type: Schema.types.String,
+        type: Schema.types.String(),
         required: true
     },
     ehBic: {
-        type: Schema.type.Boolean,
+        type: Boolean,
+    required: true,
     },
 })
 
-const caneta = db.model("index", canetaSchema)
+const caneta = db.model("caneta", canetaSchema)
 
 
 

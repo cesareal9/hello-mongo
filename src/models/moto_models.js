@@ -1,27 +1,29 @@
-const db = require("./db.js")
+const db = require("../db.js")
 
 const Schema = db.Schema;
 
 const motoSchema = new Schema({
     marca : {    
-        type: Schema.types.String,
-        required: true
+        type: String,
+        required: true,
     },
     cor: {
-        type: Schema.type.String,
+        type: String,
+    required: true,
     },
     modelo : {
-        type: Schema.type.String,
+        type: String,
+    required: true,
     },
     cilindrada: {
-        type: Schema.type.Number,
+        type: Number(),
     },
     peso : {
-        type: Schema.type.Number,
+        type: Number(),
     }
 })
 
-const moto = db.model("index", motoSchema)
+const moto = db.model("moto", motoSchema)
 
 
 
