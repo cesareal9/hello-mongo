@@ -1,9 +1,9 @@
-const moogoose = require("mongoose")
+const mongoose = require("mongoose")
 
-const mongoDB = "mongodb://localhost:27017/aluguel"
+const mongoDB = "mongodb+srv://cesareal9:LnzQwcf3p9VXD6ow@cluster0.5vbik.mongodb.net/"
 
 async function main(){
-    await moogoose.connect(mongoDB)
+    await mongoose.connect(mongoDB)
 }
 
 main()
@@ -12,4 +12,3 @@ main()
 
 module.exports = mongoose;
 
-module.exports = Livro
