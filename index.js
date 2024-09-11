@@ -2,7 +2,7 @@ const express = require("express")
 const app = express()
 const port = 5000
 
-const aeroporto_routes = require("./routes/aeroporto_routes.js")
+const aeroporto_routes = require("../routes/aeroporto_routes.js")
 
 app.use(express.json())
 
