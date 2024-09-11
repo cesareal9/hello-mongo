@@ -6,8 +6,8 @@ async function main(){
     await mongoose.connect(mongoDB)
 }
 
-main()
-.then (()=> console.log("conectado com sucesso!"))
+main().
+then (()=> console.log("conectado com sucesso!"))
 .catch(err => console.log(err))
 
 module.exports = mongoose;
